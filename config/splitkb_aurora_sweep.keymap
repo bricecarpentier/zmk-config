@@ -41,19 +41,19 @@
             
         default_layer {
             bindings = <
-    &kp Q       &kp D       &kp R       &kp W     &kp B 						&kp J &kp F &kp U &kp P &kp SQT
-    &kp A       &kp S       &kp H       &kp T     &kp G 			        	&kp Y &kp J &kp E &kp O &kp I
-    &kp Z       &kp X       &kp M       &kp C     &kp V				            &kp K &kp L &kp COMMA &kp DOT &kp SLASH
-                                        &kp TAB   &lt NAV SPC  				    &kp RETURN &kp BSPC
+    &kp Q           &kp D       &kp R           &kp W       &kp B 						&kp J &kp F &kp U &kp P &kp SQT
+    &mt LSHIFT A    &mt LALT S  &mt LCTRL H     &mt LGUI T  &kp G 			        	&kp Y &kp J &kp E &kp O &kp I
+    &kp Z           &kp X       &kp M           &kp C       &kp V				            &kp K &kp L &kp COMMA &kp DOT &kp SLASH
+                                                &kp TAB     &lt NAV SPC  				    &kp RETURN &kp BSPC
             >;
         };
 
         nav {
             bindings = <
-    &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V) &kp LS(LG(Z))		            &kp J &kp F &kp U &kp P &kp SQT
-    &kp LSHIFT  &kp LALT    &kp LCTRL   &kp LGUI  &kp TAB 			            &kp Y &kp J &kp E &kp O &kp I
-    &none       &none       &none       &none     &kp LG(GRAVE)		            &kp K &kp L &kp COMMA &kp DOT &kp SLASH
-                                        &none     &lt NAV SPC                   &kp RETURN &kp BSPC
+    &kp LG(Z)       &kp LG(X)   &kp LG(C)       &kp LG(V)   &kp LS(LG(Z))		            &kp J &kp F &kp U &kp P &kp SQT
+    &kp LSHIFT      &kp LALT    &kp LCTRL       &kp LGUI    &kp TAB 			            &kp Y &kp J &kp E &kp O &kp I
+    &none           &none       &none           &none       &kp LG(GRAVE)		            &kp K &kp L &kp COMMA &kp DOT &kp SLASH
+                                                &none       &lt NAV SPC                   &kp RETURN &kp BSPC
             >;
         };
     };
