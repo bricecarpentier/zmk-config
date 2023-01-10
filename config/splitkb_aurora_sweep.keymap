@@ -49,6 +49,20 @@
             bindings = <&kp LA(C)>;
             layers = <0>;
         };
+
+        combo_close {
+            timeout-ms = <25>;
+            key-positions = <2 3 4>;
+            bindings = <&kp LG(W)>;
+            layers = <0>;
+        };
+
+        combo_newtab {
+            timeout-ms = <25>;
+            key-positions = <12 13 14>;
+            bindings = <&kp LG(T)>;
+            layers = <0>;
+        };
     };
 
     keymap {
