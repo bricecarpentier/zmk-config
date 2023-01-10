@@ -53,7 +53,7 @@
     &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V) &kp LS(LG(Z))		            &kp J &kp F &kp U &kp P &kp SQT
     &kp LSHIFT  &kp LALT    &kp LCTRL   &kp LGUI  &kp TAB 			            &kp Y &kp J &kp E &kp O &kp I
     &none       &none       &none       &none     &kp LG(GRAVE)		            &kp K &kp L &kp &kp COMMA &kp DOT &kp SLASH
-                                        &kp none  &none  				    &kp RETURN &kp BSPC
+                                        &none     &none                         &kp RETURN &kp BSPC
             >;
         };
     };
