@@ -43,7 +43,7 @@
             bindings = <
     &kp Q       &kp D       &kp R       &kp W     &kp B 						&kp J &kp F &kp U &kp P &kp SQT
     &kp A       &kp S       &kp H       &kp T     &kp G 			        	&kp Y &kp J &kp E &kp O &kp I
-    &kp Z       &kp X       &kp M       &kp C     &kp V				            &kp K &kp L &kp &kp COMMA &kp DOT &kp SLASH
+    &kp Z       &kp X       &kp M       &kp C     &kp V				            &kp K &kp L &kp COMMA &kp DOT &kp SLASH
                                         &kp TAB   &lt NAV SPC  				    &kp RETURN &kp BSPC
             >;
         };
