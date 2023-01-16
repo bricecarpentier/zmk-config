@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
 
 #define DEFAULT     0
 #define NAV         1
@@ -70,18 +72,18 @@
             
         default_layer {
             bindings = <
-    &kp  Q          &kp  D          &kp  R          &kp  W          &kp B 						&kp J           &kp F       &kp U &kp P &kp SQT
-    &hrm LSHIFT A   &hrm LALT S     &hrm LCTRL H    &hrm LGUI T     &kp G 			        	&kp Y           &kp N       &kp E &kp O &kp I
-    &kp Z           &kp X           &kp M           &kp C           &kp V				        &kp K           &kp L       &kp COMMA &kp DOT &kp SLASH
+    &kp  Q          &kp  D          &kp  R          &kp  W          &kp B 						&kp J           &kp F       &kp U       &kp P       &kp SQT
+    &hrm LSHIFT A   &hrm LALT S     &hrm LCTRL H    &hrm LGUI T     &kp G 			        	&kp Y           &kp N       &kp E       &kp O       &kp I
+    &kp Z           &kp X           &kp M           &kp C           &kp V				        &kp K           &kp L       &kp COMMA   &kp DOT     &kp SLASH
                                                     &kp TAB         &lt NAV SPC       			&kp RETURN      &kp BSPC
             >;
         };
 
         nav {
             bindings = <
-    &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LS(LG(Z))		        &kp J           &kp F       &kp U &kp P &kp SQT
-    &kp LSHIFT      &kp LALT        &kp LCTRL       &kp LGUI        &kp TAB 			        &kp Y           &kp N       &kp E &kp O &kp I
-    &none           &none           &none           &none           &kp LG(GRAVE)		        &kp K           &kp L       &kp COMMA &kp DOT &kp SLASH
+    &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LS(LG(Z))		        &kp LBKT        &kp PLUS    &kp UP      &kp MINUS   &kp RBKT
+    &kp LSHIFT      &kp LALT        &kp LCTRL       &kp LGUI        &kp TAB 			        &kp Y           &kp LEFT    &kp DOWN    &kp LEFT    &kp I
+    &none           &none           &none           &none           &kp LG(GRAVE)		        &kp K           &kp L       &kp COMMA   &kp DOT     &kp SLASH
                                                     &none           &lt NAV SPC                 &kp RETURN      &kp BSPC
             >;
         };
