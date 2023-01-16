@@ -14,6 +14,7 @@
 #define NAV         1
 #define NUM         2
 #define FUNC        3
+#define DEV         4
 
 &mt {
   //  flavor = "tap-preferred";
@@ -31,6 +32,18 @@
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
+        };
+    };
+};
+
+/ {
+    macros {
+        fat_arrow: fat_arrow {
+            label = "fat_arrow";
+            compatible = "zmk,behavior-macro";
+            bindings
+                = <&macro_tap &kp EQUAL &kp GREATER_THAN>
+                ;
         };
     };
 };
@@ -113,7 +126,7 @@
     &kp  Q          &kp  D          &kp  R          &kp  W          &kp B 						&kp J           &kp F           &kp U           &kp P           &kp SQT
     &hrm LSHIFT A   &hrm LALT S     &hrm LCTRL H    &hrm LGUI T     &kp G 			        	&kp Y           &hrm RGUI N     &hrm RCTRL E    &hrm RALT O     &hrm RSHIFT I
     &kp Z           &kp X           &kp M           &kp C           &kp V				        &kp K           &kp L           &kp COMMA       &kp DOT         &kp SLASH
-                                                    &kp TAB         &lt NAV SPC       			&lt NUM RETURN  &lt FUNC BSPC
+                                                    &lt DEV TAB     &lt NAV SPC       			&lt NUM RETURN  &lt FUNC BSPC
             >;
         };
 
@@ -146,6 +159,14 @@
             >;
         };
 
+        dev {
+            bindings = <
+    &none           &none           &none           &none           &none  						&none           &none           &none           &none           &none
+    &none           &none           &none           &fat_arrow      &none 			        	&none           &none           &none           &none           &none
+    &none           &none           &none           &none           &none 			        	&none           &none           &none           &none           &none
+                                                    &none           &none       			    &none           &none
+            >;
+        };
     };
 };
 
