@@ -82,7 +82,7 @@
         nav {
             bindings = <
     &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LS(LG(Z))		        &kp LBKT        &kp PLUS        &kp UP          &kp MINUS       &kp RBKT
-    &kp LSHIFT      &kp LALT        &kp LCTRL       &kp LGUI        &kp TAB 			        &kp Y           &kp LEFT        &kp DOWN        &kp LEFT        &kp I
+    &kp LSHIFT      &kp LALT        &kp LCTRL       &kp LGUI        &kp TAB 			        &kp Y           &kp LEFT        &kp DOWN        &kp RIGHT       &kp I
     &out OUT_BLE    &none           &none           &none           &kp LG(GRAVE)		        &kp K           &kp L           &kp COMMA       &kp DOT         &kp SLASH
                                                     &none           &lt NAV SPC                 &kp RETURN      &kp BSPC
             >;
