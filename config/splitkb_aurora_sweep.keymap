@@ -41,6 +41,7 @@
         fat_arrow: fat_arrow {
             label = "fat_arrow";
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp EQUAL &kp GREATER_THAN>
                 ;
