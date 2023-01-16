@@ -44,11 +44,11 @@
             bindings = <&kp ESC>;
             layers = <0>;
         };
-        
-        combo_cced {
+
+        combo_del {
             timeout-ms = <25>;
-            key-positions = <21 22 23>;
-            bindings = <&kp LA(C)>;
+            key-positions = <32 34>;
+            bindings = <&kp DELETE>;
             layers = <0>;
         };
 
@@ -65,6 +65,42 @@
             bindings = <&kp LG(T)>;
             layers = <0>;
         };
+
+        combo_cced {
+            timeout-ms = <25>;
+            key-positions = <21 22 23>;
+            bindings = <&kp LA(C)>;
+            layers = <0>;
+        };
+
+        combo_acute {
+            timeout-ms = <25>;
+            key-positions = <6 7 8>;
+            bindings = <&kp RA(E)>;
+            layers = <0>;
+        };
+
+        combo_grave {
+            timeout-ms = <25>;
+            key-positions = <26 27 28>;
+            bindings = <&kp RA(GRAVE)>;
+            layers = <0>;
+        };
+        
+        combo_hat {
+            timeout-ms = <25>;
+            key-positions = <5 6 7>;
+            bindings = <&kp RA(I)>;
+            layers = <0>;
+        };
+
+        combo_trema {
+            timeout-ms = <25>;
+            key-positions = <5 6 7 8>;
+            bindings = <&kp RA(U)>;
+            layers = <0>;
+        };
+
     };
 
     keymap {
@@ -82,10 +118,26 @@
         nav {
             bindings = <
     &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LS(LG(Z))		        &kp LBKT        &kp PLUS        &kp UP          &kp MINUS       &kp RBKT
-    &kp LSHIFT      &kp LALT        &kp LCTRL       &kp LGUI        &kp TAB 			        &kp Y           &kp LEFT        &kp DOWN        &kp RIGHT       &kp I
-    &out OUT_BLE    &none           &none           &none           &kp LG(GRAVE)		        &kp K           &kp L           &kp COMMA       &kp DOT         &kp SLASH
+    &kp LSHIFT      &kp LALT        &kp LCTRL       &kp LGUI        &kp TAB 			        &none           &kp LEFT        &kp DOWN        &kp RIGHT       &none
+    &out OUT_BLE    &none           &none           &none           &kp LG(GRAVE)		        &kp LPAR        &none           &none           &none           &kp RPAR
                                                     &none           &lt NAV SPC                 &kp RETURN      &kp BSPC
             >;
         };
+
+/*
+ * Default
+ *  &kp  Q          &kp  D          &kp  R          &kp  W          &kp B 						&kp J           &kp F           &kp U           &kp P           &kp SQT
+ *  &hrm LSHIFT A   &hrm LALT S     &hrm LCTRL H    &hrm LGUI T     &kp G 			        	&kp Y           &hrm RGUI N     &hrm RCTRL E    &hrm RALT O     &hrm RSHIFT I
+ *  &kp Z           &kp X           &kp M           &kp C           &kp V				        &kp K           &kp L           &kp COMMA       &kp DOT         &kp SLASH
+ *                                                  &kp TAB         &lt NAV SPC       			&kp RETURN      &kp BSPC
+ */
+
+/*
+ * None
+ *  &none           &none           &none           &none           &none  						&none           &none           &none           &none           &none
+ *  &none           &none           &none           &none           &none 			        	&none           &none           &none           &none           &none
+ *  &none           &none           &none           &none           &none 			        	&none           &none           &none           &none           &none
+ *                                                  &none           &none       			    &none           &none
+ */
     };
 };
