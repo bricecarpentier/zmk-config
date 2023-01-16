@@ -13,6 +13,7 @@
 #define DEFAULT     0
 #define NAV         1
 #define NUM         2
+#define FUNC        3
 
 &mt {
   //  flavor = "tap-preferred";
@@ -138,14 +139,16 @@
 
     };
 };
+
+
 // Default
 //  &kp  Q          &kp  D          &kp  R          &kp  W          &kp B 						&kp J           &kp F           &kp U           &kp P           &kp SQT
 //  &hrm LSHIFT A   &hrm LALT S     &hrm LCTRL H    &hrm LGUI T     &kp G 			        	&kp Y           &hrm RGUI N     &hrm RCTRL E    &hrm RALT O     &hrm RSHIFT I
 //  &kp Z           &kp X           &kp M           &kp C           &kp V				        &kp K           &kp L           &kp COMMA       &kp DOT         &kp SLASH
 //                                                  &kp TAB         &lt NAV SPC       			&kp RETURN      &kp BSPC
-//
 
-//
+
+
 // None
 //  &none           &none           &none           &none           &none  						&none           &none           &none           &none           &none
 //  &none           &none           &none           &none           &none 			        	&none           &none           &none           &none           &none
