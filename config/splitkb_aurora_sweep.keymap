@@ -90,13 +90,6 @@
             layers = <0>;
         };
 
-        combo_del {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <32 34>;
-            bindings = <&kp DELETE>;
-            layers = <0>;
-        };
-
         combo_close {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <2 3 4>;
@@ -164,7 +157,7 @@
             bindings = <
     &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LS(LG(Z))		        &kp LBKT        &kp PLUS        &kp UP          &kp MINUS       &kp RBKT
     &kp LSHIFT      &kp LALT        &kp LCTRL       &kp LGUI        &kp TAB 			        &none           &kp LEFT        &kp DOWN        &kp RIGHT       &none
-    &out OUT_BLE    &none           &none           &none           &kp LG(GRAVE)		        &kp LPAR        &none           &none           &none           &kp RPAR
+    &out OUT_BLE    &none           &none           &none           &kp LG(GRAVE)		        &kp LPAR        &none           &kp DELETE      &none           &kp RPAR
                                                     &none           &none                       &kp RETURN      &kp BSPC
             >;
         };
@@ -174,7 +167,7 @@
 
     &kp GRAVE       &kp N7          &kp N8          &kp N9          &kp MINUS                   &kp LBKT        &kp PLUS        &none           &kp MINUS       &kp RBKT
     &kp SEMICOLON   &kp N4          &kp N5          &kp N6          &kp EQUAL                   &none           &kp RGUI        &kp RCTRL       &kp RALT        &kp RSHIFT
-    &kp BACKSLASH   &kp N1          &kp N2          &kp N3          &kp SLASH                   &kp LPAR        &none           &none           &none           &kp RPAR
+    &kp BACKSLASH   &kp N1          &kp N2          &kp N3          &kp SLASH                   &kp LPAR        &none           &kp DELETE      &none           &kp RPAR
                                                     &kp N0          &kp DOT       			    &none           &kp CAPSLOCK
  
             >;
