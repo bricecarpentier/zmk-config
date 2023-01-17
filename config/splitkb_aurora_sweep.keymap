@@ -16,6 +16,8 @@
 #define FUNC        3
 #define DEV         4
 
+#define COMBO_TIMEOUT 45
+
 &mt {
   //  flavor = "tap-preferred";
    // tapping_term_ms = <200>;
@@ -82,63 +84,63 @@
         compatible = "zmk,combos";
 
         combo_esc {
-            timeout-ms = <25>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <30 31>;
             bindings = <&kp ESC>;
             layers = <0>;
         };
 
         combo_del {
-            timeout-ms = <25>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <32 34>;
             bindings = <&kp DELETE>;
             layers = <0>;
         };
 
         combo_close {
-            timeout-ms = <25>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <2 3 4>;
             bindings = <&kp LG(W)>;
             layers = <0>;
         };
 
         combo_newtab {
-            timeout-ms = <25>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <12 13 14>;
             bindings = <&kp LG(T)>;
             layers = <0>;
         };
 
         combo_cced {
-            timeout-ms = <25>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <21 22 23>;
             bindings = <&kp LA(C)>;
             layers = <0>;
         };
 
         combo_acute {
-            timeout-ms = <25>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <6 7 8>;
             bindings = <&kp RA(E)>;
             layers = <0>;
         };
 
         combo_grave {
-            timeout-ms = <25>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <26 27 28>;
             bindings = <&kp RA(GRAVE)>;
             layers = <0>;
         };
         
         combo_hat {
-            timeout-ms = <25>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <5 6 7>;
             bindings = <&kp RA(I)>;
             layers = <0>;
         };
 
         combo_trema {
-            timeout-ms = <25>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <5 6 7 8>;
             bindings = <&kp RA(U)>;
             layers = <0>;
