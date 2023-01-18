@@ -75,6 +75,15 @@
                 = <&macro_tap &kp LC(E) &kp SEMI &kp ENTER>
                 ;
         };
+
+        call: close_all {
+            label = "elw_semi";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LG(K) &kp LG(W)>
+                ;
+        };
     };
 };
 
@@ -101,6 +110,13 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <2 3 4>;
             bindings = <&kp LG(W)>;
+            layers = <0>;
+        };
+
+        combo_close_all {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <1 2 3 4>;
+            bindings = <&call>;
             layers = <0>;
         };
 
