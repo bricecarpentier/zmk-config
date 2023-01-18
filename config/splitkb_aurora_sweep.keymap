@@ -93,7 +93,7 @@
         combo_refresh {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <1 2 3>;
-            bindings = <&kp LG(W)>;
+            bindings = <&kp LG(R)>;
             layers = <0>;
         };
 
