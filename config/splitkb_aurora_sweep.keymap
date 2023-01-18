@@ -90,6 +90,13 @@
             layers = <0>;
         };
 
+        combo_refresh {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <1 2 3>;
+            bindings = <&kp LG(W)>;
+            layers = <0>;
+        };
+
         combo_close {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <2 3 4>;
