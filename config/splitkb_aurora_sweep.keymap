@@ -180,7 +180,7 @@
             bindings = <
     &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LS(LG(Z))		        &kp LBKT        &kp PLUS        &kp UP          &kp MINUS       &kp RBKT
     &kp LSHIFT      &kp LALT        &kp LCTRL       &kp LGUI        &kp TAB 			        &none           &kp LEFT        &kp DOWN        &kp RIGHT       &none
-    &out OUT_BLE    &none           &none           &none           &kp LG(GRAVE)		        &kp LPAR        &none           &kp DELETE      &none           &kp RPAR
+    &out OUT_BLE    &none           &none           &none           &kp LG(GRAVE)		        &kp LPAR        &trans          &kp DELETE      &kp V          &kp RPAR
                                                     &none           &none                       &kp RETURN      &kp BSPC
             >;
         };
