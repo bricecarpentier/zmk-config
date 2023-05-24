@@ -153,6 +153,13 @@
             layers = <0>;
         };
 
+        combo_ctrlc {
+            timeout-ms = <100>;
+            key-positions = <12 23>;
+            bindings = <&kp LC(C)>;
+            layers = <0>;
+        };
+
     };
 
     keymap {
