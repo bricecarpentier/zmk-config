@@ -157,7 +157,7 @@
 
          combo_esccolon {
              timeout-ms = <COMBO_TIMEOUT>;
-             key-positions = <10 26>;
+             key-positions = <10 31>;
              bindings = <&esc_colon>;
              layers = <0>;
          };
