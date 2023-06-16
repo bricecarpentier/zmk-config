@@ -10,11 +10,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
-#define DEFAULT     0
-#define NAV         1
-#define NUM         2
-#define FUNC        3
-#define DEV         4
+#define DEFAULT      0
+#define NAV          1
+#define NUM          2
+#define FUNC         3
+#define DEV          4
 
 #define COMBO_TIMEOUT 45
 
@@ -24,199 +24,233 @@
 };
 
 / {
-    behaviors {
-        hrm: global-quick-tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GLOBAL_QUICK_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-        };
-    };
+     behaviors {
+         hrm: global-quick-tap {
+             compatible = "zmk,behavior-hold-tap";
+             label = "GLOBAL_QUICK_TAP";
+             #binding-cells = <2>;
+             flavor = "tap-preferred";
+             tapping-term-ms = <200>;
+             quick-tap-ms = <125>;
+             global-quick-tap;
+             bindings = <&kp>, <&kp>;
+         };
+     };
 };
 
 / {
-    macros {
-        fat_arrow: fat_arrow {
-            label = "fat_arrow";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp EQUAL &kp GREATER_THAN>
-                ;
-        };
+     macros {
+         fat_arrow: fat_arrow {
+             label = "fat_arrow";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                 = <&macro_tap &kp EQUAL &kp GREATER_THAN>
+                 ;
+         };
 
-        elw_comma: elw_comma {
-            label = "elw_comma";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LC(E) &kp COMMA &kp ENTER>
-                ;
-        };
+         elw_comma: elw_comma {
+             label = "elw_comma";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                 = <&macro_tap &kp LC(E) &kp COMMA &kp ENTER>
+                 ;
+         };
 
-        elw_semi: elw_semi {
-            label = "elw_semi";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LC(E) &kp SEMI &kp ENTER>
-                ;
-        };
+         elw_semi: elw_semi {
+             label = "elw_semi";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                 = <&macro_tap &kp LC(E) &kp SEMI &kp ENTER>
+                 ;
+         };
 
-        call: close_all {
-            label = "elw_semi";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LG(K) &kp LG(W)>
-                ;
-        };
-    };
+         call: close_all {
+             label = "elw_semi";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                 = <&macro_tap &kp LG(K) &kp LG(W)>
+                 ;
+         };
+     };
 };
 
 / { 
 
-    combos {
-        compatible = "zmk,combos";
+     combos {
+         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <30 31>;
-            bindings = <&kp ESC>;
-            layers = <0>;
-        };
+         combo_esc {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <30 31>;
+             bindings = <&kp ESC>;
+             layers = <0>;
+         };
 
-        combo_refresh {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <1 2 3>;
-            bindings = <&kp LG(R)>;
-            layers = <0>;
-        };
+         combo_refresh {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <1 2 3>;
+             bindings = <&kp LG(R)>;
+             layers = <0>;
+         };
 
-        combo_close {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <2 3 4>;
-            bindings = <&kp LG(W)>;
-            layers = <0>;
-        };
+         combo_close {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <2 3 4>;
+             bindings = <&kp LG(W)>;
+             layers = <0>;
+         };
 
-        combo_close_all {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <1 2 3 4>;
-            bindings = <&call>;
-            layers = <0>;
-        };
+         combo_close_all {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <1 2 3 4>;
+             bindings = <&call>;
+             layers = <0>;
+         };
 
-        combo_newtab {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <12 13 14>;
-            bindings = <&kp LG(T)>;
-            layers = <0>;
-        };
+         combo_newtab {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <12 13 14>;
+             bindings = <&kp LG(T)>;
+             layers = <0>;
+         };
 
-        combo_cced {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <21 22 23>;
-            bindings = <&kp LA(C)>;
-            layers = <0>;
-        };
+         combo_cced {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <21 22 23>;
+             bindings = <&kp LA(C)>;
+             layers = <0>;
+         };
 
-        combo_acute {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <6 7 8>;
-            bindings = <&kp RA(E)>;
-            layers = <0>;
-        };
+         combo_acute {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <6 7 8>;
+             bindings = <&kp RA(E)>;
+             layers = <0>;
+         };
 
-        combo_grave {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <26 27 28>;
-            bindings = <&kp RA(GRAVE)>;
-            layers = <0>;
-        };
-        
-        combo_hat {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <6 7 8 9>;
-            bindings = <&kp RA(I)>;
-            layers = <0>;
-        };
+         combo_grave {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <26 27 28>;
+             bindings = <&kp RA(GRAVE)>;
+             layers = <0>;
+         };
+         
+         combo_hat {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <6 7 8 9>;
+             bindings = <&kp RA(I)>;
+             layers = <0>;
+         };
 
-        combo_trema {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <5 6 7 8>;
-            bindings = <&kp RA(U)>;
-            layers = <0>;
-        };
-    };
+         combo_trema {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <5 6 7 8>;
+             bindings = <&kp RA(U)>;
+             layers = <0>;
+         };
+     };
 
-    keymap {
-            compatible = "zmk,keymap";
-            
-        default_layer {
-            bindings = <
-    &kp Q           &kp  D          &kp  R          &kp  W          &kp B 						&kp J           &kp F           &kp U           &kp P           &kp SQT
-    &hrm LSHIFT A   &hrm LALT S     &hrm LCTRL H    &hrm LGUI T     &kp G 			        	&kp Y           &hrm RGUI N     &hrm RCTRL E    &hrm RALT O     &hrm RSHIFT I
-    &kp Z           &kp X           &kp M           &kp C           &kp V				        &kp K           &kp L           &kp COMMA       &kp DOT         &kp SLASH
-                                                    &lt DEV TAB     &lt NAV SPC       			&lt NUM RETURN  &lt FUNC BSPC
-            >;
-        };
+     keymap {
+             compatible = "zmk,keymap";
+             
+         default_layer {
+             bindings = <
+// ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
+     &kp Q           &kp  D          &kp  R         &kp  W          &kp B             &kp J           &kp F           &kp U          &kp P           &kp SQT
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &hrm LSHIFT A   &hrm LALT S     &hrm LCTRL H   &hrm LGUI T     &kp G             &kp Y           &hrm RGUI N     &hrm RCTRL E   &hrm RALT O     &hrm RSHIFT I
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &kp Z           &kp X           &kp M          &kp C           &kp V             &kp K           &kp L           &kp COMMA      &kp DOT         &kp SLASH
+// ╰───────────────┴───────────────┴──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┴──────────────┴───────────────┴───────────────╯
+                                                    &lt DEV TAB     &lt NAV SPC       &lt NUM RET     &lt FUNC BSPC
+//                                                ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
+             >;
+         };
 
-        nav {
-            bindings = <
-    &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LS(LG(Z))		        &kp LBKT        &kp PLUS        &kp UP          &kp MINUS       &kp RBKT
-    &kp LSHIFT      &kp LALT        &kp LCTRL       &kp LGUI        &kp TAB 			        &none           &kp LEFT        &kp DOWN        &kp RIGHT       &none
-    &none           &none           &none           &none           &kp LG(GRAVE)		        &kp LPAR        &trans          &kp DELETE      &kp V           &kp RPAR
-                                                    &none           &none                       &kp RETURN      &kp BSPC
-            >;
-        };
+         nav {
+             bindings = <
+// ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
+     &kp LG(Z)       &kp LG(X)       &kp LG(C)      &kp LG(V)       &kp LS(LG(Z))     &kp LBKT        &kp PLUS        &kp UP         &kp MINUS       &kp RBKT
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &kp LSHIFT      &kp LALT        &kp LCTRL      &kp LGUI        &kp TAB           &none           &kp LEFT        &kp DOWN       &kp RIGHT       &none
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &none           &none           &none          &none           &kp LG(GRAVE)     &kp LPAR        &trans          &kp DELETE     &kp V           &kp RPAR
+// ╰───────────────┴───────────────┴──────────────┼ ──────────────┼───────────────┤ ├───────────────┼───────────────┴──────────────┴───────────────┴───────────────╯
+                                                    &none           &none             &kp RETURN      &kp BSPC
+//                                                ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
+             >;
+         };
 
-        num {
-            bindings = <
-
-    &kp GRAVE       &kp N7          &kp N8          &kp N9          &kp MINUS                   &kp LBKT        &kp PLUS        &none           &kp MINUS       &kp RBKT
-    &kp SEMICOLON   &kp N4          &kp N5          &kp N6          &kp EQUAL                   &none           &kp RGUI        &kp RCTRL       &kp RALT        &kp RSHIFT
-    &kp BACKSLASH   &kp N1          &kp N2          &kp N3          &kp SLASH                   &kp LPAR        &none           &kp DELETE      &none           &kp RPAR
-                                                    &kp N0          &kp DOT       			    &none           &kp CAPSLOCK
+         num {
+             bindings = <
+// ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
+     &kp GRAVE       &kp N7          &kp N8         &kp N9          &kp MINUS         &kp LBKT        &kp PLUS        &none          &kp MINUS       &kp RBKT
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &kp SEMICOLON   &kp N4          &kp N5         &kp N6          &kp EQUAL         &none           &kp RGUI        &kp RCTRL      &kp RALT        &kp RSHIFT
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &kp BACKSLASH   &kp N1          &kp N2         &kp N3          &kp SLASH         &kp LPAR        &none           &kp DELETE     &none           &kp RPAR
+// ╰───────────────┴───────────────┴──────────────┼ ──────────────┼───────────────┤ ├───────────────┼───────────────┴──────────────┴───────────────┴───────────────╯
+                                                    &kp N0          &kp DOT           &none           &kp CAPSLOCK
+//                                                ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
  
-            >;
-        };
+             >;
+         };
 
-        func {
-            bindings = <
-    &kp F12         &kp F7          &kp F8          &kp F9          &none  						&kp F14         &kp F15         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP
-    &kp F11         &kp F4          &kp F5          &kp F6          &none 			        	&none           &kp RGUI        &kp RCTRL       &kp RALT        &kp RSHIFT
-    &kp F10         &kp F1          &kp F2          &kp F3          &none 			        	&out OUT_USB    &out OUT_BLE    &bt BT_CLR      &bt BT_SEL 1    &bt BT_SEL 2
-                                                    &none           &kp SPACE    			    &none           &none
-            >;
-        };
+         func {
+             bindings = <
+// ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
+     &kp F12         &kp F7          &kp F8         &kp F9          &none             &kp F14         &kp F15         &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &kp F11         &kp F4          &kp F5         &kp F6          &none             &none           &kp RGUI        &kp RCTRL      &kp RALT        &kp RSHIFT
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &kp F10         &kp F1          &kp F2         &kp F3          &none             &out OUT_USB    &out OUT_BLE    &bt BT_CLR     &bt BT_SEL 1    &bt BT_SEL 2
+// ╰───────────────┴───────────────┴──────────────┼ ──────────────┼───────────────┤ ├───────────────┼───────────────┴──────────────┴───────────────┴───────────────╯
+                                                    &none           &kp SPACE         &none           &none
+//                                                ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
+             >;
+         };
 
-        dev {
-            bindings = <
-    &none           &none           &none           &none           &none  						&none           &none           &none           &none           &none
-    &elw_semi       &none           &none           &fat_arrow      &none 			        	&none           &none           &none           &none           &none
-    &none           &none           &none           &none           &none 			        	&none           &none           &elw_comma      &none           &none
-                                                    &none           &none       			    &none           &none
-            >;
-        };
-    };
+         dev {
+             bindings = <
+// ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
+     &none           &none           &none          &none           &none             &none           &none           &none          &none           &none
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &elw_semi       &none           &none          &fat_arrow      &none             &none           &none           &none          &none           &none
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+     &none           &none           &none          &none           &none             &none           &none           &elw_comma     &none           &none
+// ╰───────────────┴───────────────┴──────────────┼ ──────────────┼───────────────┤ ├───────────────┼───────────────┴──────────────┴───────────────┴───────────────╯
+                                                    &none           &none             &none           &none
+//                                                ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
+             >;
+         };
+     };
 };
 
 
 // Default
-//  &kp  Q          &kp  D          &kp  R          &kp  W          &kp B 						&kp J           &kp F           &kp U           &kp P           &kp SQT
-//  &hrm LSHIFT A   &hrm LALT S     &hrm LCTRL H    &hrm LGUI T     &kp G 			        	&kp Y           &hrm RGUI N     &hrm RCTRL E    &hrm RALT O     &hrm RSHIFT I
-//  &kp Z           &kp X           &kp M           &kp C           &kp V				        &kp K           &kp L           &kp COMMA       &kp DOT         &kp SLASH
-//                                                  &kp TAB         &lt NAV SPC       			&kp RETURN      &kp BSPC
+// ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
+//   &kp  Q           &kp  D          &kp  R          &kp  W          &kp B 						&kp J           &kp F           &kp U           &kp P           &kp SQT
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+//   &hrm LSHIFT A   &hrm LALT S      &hrm LCTRL H    &hrm LGUI T     &kp G 			        	&kp Y           &hrm RGUI N     &hrm RCTRL E    &hrm RALT O     &hrm RSHIFT I
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+//   &kp Z            &kp X           &kp M           &kp C           &kp V				        &kp K           &kp L           &kp COMMA       &kp DOT         &kp SLASH
+// ╰───────────────┴───────────────┴──────────────┼ ──────────────┼───────────────┤ ├───────────────┼───────────────┴──────────────┴───────────────┴───────────────╯
+//                                                   &kp TAB         &lt NAV SPC       			&kp RETURN      &kp BSPC
+//                                                ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
 
 
 
 // None
-//  &none           &none           &none           &none           &none  						&none           &none           &none           &none           &none
-//  &none           &none           &none           &none           &none 			        	&none           &none           &none           &none           &none
-//  &none           &none           &none           &none           &none 			        	&none           &none           &none           &none           &none
-//                                                  &none           &none       			    &none           &none
+// ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
+//   &none            &none           &none           &none           &none  						&none           &none           &none           &none           &none
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+//   &none            &none           &none           &none           &none 			        	&none           &none           &none           &none           &none
+// ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
+//   &none            &none           &none           &none           &none 			        	&none           &none           &none           &none           &none
+// ╰───────────────┴───────────────┴──────────────┼ ──────────────┼───────────────┤ ├───────────────┼───────────────┴──────────────┴───────────────┴───────────────╯
+//                                                   &none           &none       			    &none           &none
+//                                                ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
