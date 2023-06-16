@@ -83,13 +83,6 @@
      combos {
          compatible = "zmk,combos";
 
-         combo_esc {
-             timeout-ms = <COMBO_TIMEOUT>;
-             key-positions = <30 31>;
-             bindings = <&kp ESC>;
-             layers = <0>;
-         };
-
          combo_refresh {
              timeout-ms = <COMBO_TIMEOUT>;
              key-positions = <1 2 3>;
