@@ -83,7 +83,7 @@
              bindings
                  = <&macro_tap &kp ESC &kp COLON>
                  ;
-         }
+         };
      };
 };
 
