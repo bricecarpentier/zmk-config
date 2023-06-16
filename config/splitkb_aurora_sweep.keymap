@@ -160,7 +160,7 @@
              key-positions = <10 26>;
              bindings = <&esc_colon>;
              layers = <0>;
-         }
+         };
      };
 
      keymap {
