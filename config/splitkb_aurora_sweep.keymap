@@ -75,6 +75,15 @@
                  = <&macro_tap &kp LG(K) &kp LG(W)>
                  ;
          };
+
+         esc_colon: esc_colon {
+             label = "esc_colon";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                 = <&macro_tap &kp ESC &kp COLON>
+                 ;
+         }
      };
 };
 
@@ -145,6 +154,13 @@
              bindings = <&kp RA(U)>;
              layers = <0>;
          };
+
+         combo_esccolon {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <10 26>;
+             bindings = <&esc_colon>;
+             layers = <0>;
+         }
      };
 
      keymap {
