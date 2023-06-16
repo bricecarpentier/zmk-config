@@ -38,16 +38,6 @@
 };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NUM FUNC>;
-            then-layer = <NAV>;
-        };
-    };
-};
-
-/ {
      macros {
          fat_arrow: fat_arrow {
              label = "fat_arrow";
@@ -219,9 +209,9 @@
          dev {
              bindings = <
 // ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
-     &none           &none           &none          &none           &none             &none           &none           &none          &none           &none
+     &none           &none           &none          &none           &none             &none           &none           &kp UP         &none           &none
 // ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
-     &elw_semi       &none           &none          &fat_arrow      &none             &none           &none           &none          &none           &none
+     &elw_semi       &none           &none          &fat_arrow      &none             &none           &kp LEFT        &kp DOWN       &kp RIGHT       &none
 // ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
      &none           &none           &none          &none           &none             &none           &none           &elw_comma     &none           &none
 // ╰───────────────┴───────────────┴──────────────┼ ──────────────┼───────────────┤ ├───────────────┼───────────────┴──────────────┴───────────────┴───────────────╯
