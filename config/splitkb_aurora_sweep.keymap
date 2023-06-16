@@ -161,6 +161,13 @@
              bindings = <&esc_colon>;
              layers = <0>;
          };
+
+         combo_tab {
+             timeout-ms = <COMBO_TIMEOUT>;
+             key-positions = <30 31>;
+             bindings = <&kp TAB>;
+             layers = <0>;
+         };
      };
 
      keymap {
