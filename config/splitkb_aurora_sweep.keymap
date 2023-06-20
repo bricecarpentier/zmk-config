@@ -19,18 +19,13 @@
 
 #define COMBO_TIMEOUT 45
 
-&mt {
-  //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
-};
-
 / {
      behaviors {
          hrm: global-quick-tap {
              compatible = "zmk,behavior-hold-tap";
              label = "HOMEROW_MODS";
              #binding-cells = <2>;
-             flavor = "balanced";
+             flavor = "tap-preferred";
              tapping-term-ms = <200>;
              quick-tap-ms = <0>;
              bindings = <&kp>, <&kp>;
