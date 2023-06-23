@@ -30,6 +30,22 @@
              quick-tap-ms = <0>;
              bindings = <&kp>, <&kp>;
          };
+
+         vol_brt_down: volume_brightness_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VOLUME_BRIGHTNESS_DOWN";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOLUME_DOWN>, <&kp C_BRIGHTNESS_DEC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+         };
+         
+         vol_brt_up: volume_brightness_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VOLUME_BRIGHTNESS_UP";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOLUME_UP>, <&kp C_BRIGHTNESS_INC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+         };
      };
 };
 
@@ -227,7 +243,7 @@
          func {
              bindings = <
 // ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
-     &kp F12         &kp F7          &kp F8         &kp F9          &caps_word        &kp F14         &kp F15         &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP
+     &kp F12         &kp F7          &kp F8         &kp F9          &caps_word        &kp F14         &kp F15         &kp C_MUTE     &vol_brt_down   &vol_brt_up
 // ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
      &kp F11         &kp F4          &kp F5         &kp F6          &kp CAPSLOCK      &none           &kp RGUI        &kp RCTRL      &kp RALT        &kp RSHIFT
 // ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
