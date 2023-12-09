@@ -60,23 +60,6 @@
                  ;
          };
 
-         elw_comma: elw_comma {
-             label = "elw_comma";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             bindings
-                 = <&macro_tap &kp LC(E) &kp COMMA &kp ENTER>
-                 ;
-         };
-
-         elw_semi: elw_semi {
-             label = "elw_semi";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             bindings
-                 = <&macro_tap &kp LC(E) &kp SEMI &kp ENTER>
-                 ;
-         };
 
          call: close_all {
              label = "elw_semi";
@@ -259,9 +242,9 @@
 // ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬──────────────┬───────────────┬───────────────╮
      &none           &none           &none          &none           &none             &none           &none           &none          &none           &none
 // ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
-     &elw_semi       &none           &none          &fat_arrow      &none             &none           &none           &none          &none           &none
+     &none           &none           &none          &fat_arrow      &none             &none           &none           &none          &none           &none
 // ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼──────────────┼───────────────┼───────────────┤
-     &none           &none           &none          &none           &none             &none           &none           &elw_comma     &none           &none
+     &none           &none           &none          &none           &none             &none           &none           &none          &none           &none
 // ╰───────────────┴───────────────┴──────────────┼ ──────────────┼───────────────┤ ├───────────────┼───────────────┴──────────────┴───────────────┴───────────────╯
                                                     &none           &none             &to WORKMAN     &to QWERTY
 //                                                ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
