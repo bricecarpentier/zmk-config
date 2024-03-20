@@ -162,6 +162,13 @@
              bindings = <&kp TAB>;
              layers = <0>;
          };
+
+         combo_vim_search {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <11>;
+            bindings = <&kp SPACE>, <&kp SPACE>, <&kp S>;
+            layers = <5>;
+         };
      };
 
      keymap {
